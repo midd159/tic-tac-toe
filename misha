@@ -1,4 +1,7 @@
 def print_board(board):
-    for row in board:
-        print(" | ".join(row))
-        print("-" * 5)
+    cells = [c if c != " " else str(i+1) for i, c in enumerate(board)]
+    print(f"\n {cells[0]} | {cells[1]} | {cells[2]}")
+    print("---+---+---")
+    print(f" {cells[3]} | {cells[4]} | {cells[5]}")
+    print("---+---+---")
+    print(f" {cells[6]} | {cells[7]} | {cells[8]}\n")
