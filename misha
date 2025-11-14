@@ -11,3 +11,10 @@ def check_winner(board):
         (0,3,6), (1,4,7), (2,5,8),
         (0,4,8), (2,4,6)
     ]
+    for a, b, c in wins:
+        if board[a] != " " and board[a] == board[b] == board[c]:
+            return board[a]
+    return None
+
+def is_draw(board):
+    return all(c != " " for c in board)
