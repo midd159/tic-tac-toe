@@ -1,0 +1,5 @@
+def tic_tac_toe():
+    board = [" "] * 9
+    player = "X"
+    print("Крестики-нолики. Игроки: X и O. Пустые клетки отмечены номерами 1–9.")
+    print_board(board)
