@@ -15,3 +15,8 @@ def tic_tac_toe():
         if is_draw(board):
             print("Ничья.")
             break
+
+        player = "O" if player == "X" else "X"
+
+if name == "main":
+    tic_tac_toe()
