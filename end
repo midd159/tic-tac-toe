@@ -33,3 +33,25 @@ def get_move(player, board):
             print("Клетка занята. Выберите другую.")
             continue
         return idx
+def tic_tac_toe():
+    board = [" "] * 9
+    player = "X"
+    print("Крестики-нолики. Игроки: X и O. Пустые клетки отмечены номерами 1–9.")
+    print_board(board)
+    while True:
+        move = get_move(player, board)
+        board[move] = player
+        print_board(board)
+
+        winner = check_winner(board)
+        if winner:
+            print(f"Победа игрока {winner}!")
+            break
+        if is_draw(board):
+            print("Ничья.")
+            break
+
+        player = "O" if player == "X" else "X"
+
+if name == "main":
+    tic_tac_toe()
