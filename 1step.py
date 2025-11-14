@@ -8,3 +8,8 @@ def get_move(player, board):
         if not 1 <= pos <= 9:
             print("Позиция вне диапазона. Попробуйте снова.")
             continue
+        idx = pos - 1
+        if board[idx] != " ":
+            print("Клетка занята. Выберите другую.")
+            continue
+        return idx
